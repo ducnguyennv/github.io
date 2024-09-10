@@ -1,267 +1,512 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phạm Đức Long PDL - Dịch vụ Lấy lại Facebook Uy tín</title>
-    <meta name="description" content="Phạm Đức Long PDL cung cấp dịch vụ lấy lại Facebook uy tín, làm xong mới thanh toán. Hỗ trợ 24/7, giải quyết mọi vấn đề liên quan đến tài khoản Facebook của bạn.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="canonical" href="https://www.phamduc.com/lay-lai-facebook">
-    <meta property="og:title" content="Phạm Đức Long PDL - Dịch vụ Lấy lại Facebook Uy tín">
-    <meta property="og:description" content="Phạm Đức Long PDL cung cấp dịch vụ lấy lại Facebook uy tín, làm xong mới thanh toán. Hỗ trợ 24/7, giải quyết mọi vấn đề liên quan đến tài khoản Facebook của bạn.">
-    <meta property="og:image" content="https://www.phamduc.com/images/og-image.jpg">
-    <meta property="og:url" content="https://www.phamduc.com/lay-lai-facebook">
-    <script type="application/ld+json" src="schema.json"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <style>
-        @media only screen and (max-width: 992px) {
-            .container {
-                width: 100%;
+        :root {
+            --primary-color: #007FFF;
+            --secondary-color: #1A2027;
+            --background-color: #F3F6F9;
+            --card-background: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #2196F3; /* Màu xanh nhẹ nhàng hơn */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                margin-top: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
             }
         }
-        
-        @media only screen and (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            h3 {
-                font-size: 1.5rem;
-            }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.growth-rocket.com/wp-content/uploads/2021/11/Charting-the-Next-Frontier-Featured-Image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
             .hero {
-                padding: 50px 0;
+                padding: 80px 0;
             }
-            .social-proof img {
-                height: 20px;
-                margin: 0 5px;
+
+            .section {
+                padding: 40px 0;
+            }
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            /* Giảm padding */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            /* Giảm kích thước font cho tiêu đề */
+            margin-bottom: 5px;
+            /* Giảm margin dưới */
+        }
+
+        header p {
+            font-size: 0.9rem;
+            /* Giảm kích thước font cho mô tả */
+            margin: 0;
+            /* Loại bỏ margin */
+        }
+
+        .services {
+            background-color: var(--background-color);
+            padding: 80px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-demo {
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .service-demo img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .service-demo pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ... (các style khác giữ nguyên) ... */
+
+        .process {
+            background-color: #f5f5f5;
+            padding: 80px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            background-color: white;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 16px;
+            font-weight: bold;
+        }
+
+        .process-step h3 {
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .testimonials {
+            background-color: #f5f5f5;
+            padding: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .client-logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .testimonial-author h3 {
+            margin: 0 0 5px;
+            color: var(--primary-color);
+        }
+
+        .testimonial-author p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
-        <nav class="blue darken-4">
-            <div class="nav-wrapper container">
-                <a href="#" class="brand-logo">
-                    <img src="images/pdl-logo.png" alt="Phạm Đức Long PDL Logo" height="50">
-                </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Phạm Đức Long PDL</h1>
+            </div>
+            <nav>
+                <ul>
                     <li><a href="#services">Dịch vụ</a></li>
-                    <li><a href="#process">Quy trình</a></li>
-                    <li><a href="#pricing">Bảng giá</a></li>
+                    <li><a href="#about">Về chúng tôi</a></li>
                     <li><a href="#contact">Liên hệ</a></li>
                 </ul>
-            </div>
-        </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#process">Quy trình</a></li>
-            <li><a href="#pricing">Bảng giá</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero blue lighten-4">
-            <div class="container">
-                <h1 class="center-align">Dịch Vụ Lấy Lại Facebook Uy Tín – Làm Xong Mới Thanh Toán</h1>
-                <p class="center-align">Facebook của bạn bị mất mật khẩu, bị khóa hoặc không vào được? Đừng lo lắng! Phạm Đức Long PDL ở đây để hỗ trợ bạn với 5 năm kinh nghiệm.</p>
-                <div class="center-align">
-                    <a href="#contact" class="waves-effect waves-light btn-large blue darken-2">Liên hệ ngay</a>
-                </div>
-                <div class="social-proof center-align">
-                    <img src="images/trustpilot.png" alt="Đánh giá 4.8/5 trên Trustpilot">
-                    <img src="images/google-reviews.png" alt="Đánh giá 4.9/5 trên Google">
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2 class="center-align">Các Dịch Vụ Của Chúng Tôi</h2>
-                <div class="row">
-                    <div class="col s12 m6 l3">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title center-align"><i class="material-icons medium blue-text">lock_open</i></span>
-                                <h3 class="center-align">Facebook bị hack thay đổi Email và SĐT</h3>
-                                <p class="center-align">Thời gian trợ giúp: từ 5 phút – 24 giờ</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title center-align"><i class="material-icons medium blue-text">security</i></span>
-                                <h3 class="center-align">Facebook bị khóa két sắt màu tím</h3>
-                                <p class="center-align">Thời gian trợ giúp: từ 5 phút – 24 giờ</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title center-align"><i class="material-icons medium blue-text">gavel</i></span>
-                                <h3 class="center-align">Facebook vi phạm tiêu chuẩn cộng đồng</h3>
-                                <p class="center-align">Thời gian trợ giúp: từ 30 phút – 30 ngày</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l3">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title center-align"><i class="material-icons medium blue-text">vpn_key</i></span>
-                                <h3 class="center-align">Facebook bị mã đăng nhập</h3>
-                                <p class="center-align">Thời gian trợ giúp: từ 5 phút – 24 giờ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="process" class="section grey lighten-4">
-            <div class="container">
-                <h2 class="center-align">Quy Trình Làm Việc</h2>
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="center promo">
-                            <i class="material-icons large blue-text">receipt</i>
-                            <h3>Tiếp Nhận</h3>
-                            <p>Tiếp nhận tình trạng của khách hàng</p>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="center promo">
-                            <i class="material-icons large blue-text">question_answer</i>
-                            <h3>Tư Vấn</h3>
-                            <p>Tư vấn về vấn đề của khách hàng</p>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="center promo">
-                            <i class="material-icons large blue-text">attach_money</i>
-                            <h3>Báo Giá</h3>
-                            <p>Báo giá trình trạng của khách hàng</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="center promo">
-                            <i class="material-icons large blue-text">build</i>
-                            <h3>Thực Hiện</h3>
-                            <p>Thực hiện làm khi khách hàng đã đồng ý</p>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="center promo">
-                            <i class="material-icons large blue-text">done_all</i>
-                            <h3>Bàn Giao</h3>
-                            <p>Bàn giao cho khách hàng khi làm xong</p>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="center promo">
-                            <i class="material-icons large blue-text">verified_user</i>
-                            <h3>Bảo Hành</h3>
-                            <p>Hỗ trợ bảo hành cho khách hàng khi xong</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing" class="section">
-            <div class="container">
-                <h2 class="center-align">Bảng Giá Dịch Vụ</h2>
-                <div class="row">
-                    <div class="col s12 m6">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title">Lấy Lại Facebook Bị Hack</span>
-                                <p>Bị hack Email và đổi số điện thoại và đôi khi còn bị hacker cố tình khóa Facebook lại</p>
-                                <h4 class="center-align">300,000 VND</h4>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#contact" class="waves-effect waves-light btn blue">Liên hệ ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6">
-                        <div class="card">
-                            <div class="card-content">
-                                <span class="card-title">Facebook Bị Khóa 2 Yếu Tố</span>
-                                <p>Bị hack cài 2 yếu tố hoặc bị khóa dạng như két sắt tím hoặc những tình trạng vô hiệu hóa</p>
-                                <h4 class="center-align">400,000 VND</h4>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#contact" class="waves-effect waves-light btn blue">Liên hệ ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section grey lighten-4">
-            <div class="container">
-                <h2 class="center-align">Liên Hệ Với Chúng Tôi</h2>
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="name" type="text" class="validate">
-                                <label for="name">Họ và tên</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">phone</i>
-                                <input id="phone" type="tel" class="validate">
-                                <label for="phone">Số điện thoại</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix">message</i>
-                                <textarea id="message" class="materialize-textarea"></textarea>
-                                <label for="message">Tin nhắn</label>
-                            </div>
-                        </div>
-                        <div class="row center-align">
-                            <button class="btn waves-effect waves-light blue" type="submit" name="action">Gửi
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="page-footer blue darken-4">
+    <section class="hero">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Phạm Đức Long PDL</h5>
-                    <p class="grey-text text-lighten-4">Chúng tôi cung cấp dịch vụ lấy lại Facebook uy tín, làm xong mới thanh toán. Hỗ trợ 24/7, giải quyết mọi vấn đề liên quan đến tài khoản Facebook của bạn.</p>
+            <h2>Lấy lại Facebook của bạn một cách an toàn và nhanh chóng</h2>
+            <p>Chúng tôi cung cấp dịch vụ chuyên nghiệp để giúp bạn khôi phục tài khoản Facebook bị mất</p>
+            <a href="#contact" class="cta-button">Liên hệ ngay</a>
+        </div>
+    </section>
+
+    <section class="section services">
+        <div class="container">
+            <h2>Dịch vụ của chúng tôi</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Khôi phục tài khoản bị khóa</h3>
+                    <p>Chúng tôi có thể giúp bạn mở khóa tài khoản Facebook bị khóa vì vi phạm chính sách</p>
+                    <div class="service-demo">
+                        <img src="path/to/account-recovery-image.jpg" alt="Khôi phục tài khoản" />
+                        <pre><code>
+    
+                        </code></pre>
+                    </div>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Liên kết</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#services">Dịch vụ</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#process">Quy trình</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#pricing">Bảng giá</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#contact">Liên hệ</a></
+                <div class="service-card">
+                    <h3>Lấy lại mật khẩu</h3>
+                    <p>Quên mật khẩu? Không vấn đề! Chúng tôi sẽ giúp bạn lấy lại quyền truy cập vào tài khoản của mình
+                    </p>
+                    <div class="service-demo">
+                        <img src="path/to/password-recovery-image.jpg" alt="Lấy lại mật khẩu" />
+                        <pre><code>
+  
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Bảo mật tài khoản</h3>
+                    <p>Chúng tôi cung cấp dịch vụ tăng cường bảo mật cho tài khoản Facebook của bạn</p>
+                    <div class="service-demo">
+                        <img src="path/to/account-security-image.jpg" alt="Bảo mật tài khoản" />
+                        <pre><code>
+   
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section process">
+        <div class="container">
+            <h2>Quy Trình Làm Việc Của văn phòng Phạm Đức Long</h2>
+            <p>Hãy tìm hiểu về quy trình thực hiện dịch vụ lấy lại Facebook của chúng tôi nhé</p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Tiếp Nhận</h3>
+                    <p>Tiếp nhận tình trạng của khách hàng</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Tư Vấn</h3>
+                    <p>Tư vấn về vấn đề của khách hàng</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Báo Giá</h3>
+                    <p>Báo giá trình trạng của khách hàng</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Thực Hiện</h3>
+                    <p>Thực hiện làm khi khách hàng đã đồng ý</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3>Bàn Giao</h3>
+                    <p>Bàn giao cho khách hàng khi làm xong</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">06</div>
+                    <h3>Bảo Hành</h3>
+                    <p>Hỗ trợ bảo hành cho khách hàng khi xong</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section testimonials">
+        <div class="container">
+            <h2>Câu chuyện thành công của khách hàng</h2>
+            <p>Khám phá các dự án công nghệ nổi bật của AgileOps, từ việc phát triển phần mềm mới thành công đến triển khai hạ tầng hiệu quả.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <img src="path/to/emddi-logo.png" alt="EMDDI Logo" class="client-logo">
+                    <p>"Nhờ triển khai giải pháp Atlassian cùng AgileOps để số hóa quy trình làm việc, các team của EMDDI có thể kiểm soát, theo dõi tiến độ, giúp công ty hệ thống hóa công việc một cách trực quan và rõ ràng."</p>
+                    <div class="testimonial-author">
+                        <img src="path/to/dao-khanh-tung-avatar.jpg" alt="Đào Khánh Tùng" class="author-avatar">
+                        <div>
+                            <h3>Đào Khánh Tùng</h3>
+                            <p>QA Manager - EMDDI</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img src="path/to/spherewms-logo.png" alt="SphereWMS Logo" class="client-logo">
+                    <p>"Trong suốt những năm làm việc cùng với Kiệt - CEO, Founder AgileOps trên nhiều dự án khác nhau, Kiệt rất tận tụy và luôn sẵn sàng hỗ trợ 24/7 dù có chênh lệch múi giờ quốc tế. Anh ấy luôn nhanh chóng phản hồi và tập trung vào công việc cho đến khi hoàn thành. Đóng góp của anh ấy đã góp phần không nhỏ vào tổ chức của chúng tôi."</p>
+                    <div class="testimonial-author">
+                        <img src="path/to/roark-janis-avatar.jpg" alt="Roark Janis" class="author-avatar">
+                        <div>
+                            <h3>Roark Janis</h3>
+                            <p>COO SphereWMS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img src="path/to/infea-ventures-logo.png" alt="Infea Ventures Logo" class="client-logo">
+                    <p>"Tôi rất hân hạnh khi có cơ hội hợp tác cùng Kiệt. Anh không chỉ có những kỹ năng chuyên môn xuất sắc mà còn có phong cách giao tiếp rất hiệu quả với mọi người và các dự án. Các dự án dưới sự điều hành của Kiệt luôn được hoàn thành với chất lượng và đúng tiến độ. Kiệt cũng là một kỹ sư phần mềm tài năng, đã tạo ra module tự động hóa cho phòng kế toán của chúng tôi."</p>
+                    <div class="testimonial-author">
+                        <img src="path/to/christian-fea-avatar.jpg" alt="Christian Fea" class="author-avatar">
+                        <div>
+                            <h3>Christian Fea</h3>
+                            <p>CEO Infea Ventures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Liên hệ với chúng tôi</h2>
+            <p>Điện thoại: 0123456789</p>
+            <p>Email: phamduclong@example.com</p>
+            <p>Facebook: <a href="https://www.facebook.com/phamduclong">https://www.facebook.com/phamduclong</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Phạm Đức Long PDL. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
