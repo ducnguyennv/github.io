@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.cta-primary, .cta-secondary {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.social-proof {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+#benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+#testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero {
+    background-image: url('https://www.growth-rocket.com/wp-content/uploads/2021/11/Charting-the-Next-Frontier-Featured-Image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Tạo hiệu ứng parallax */
+    color: white; /* Đảm bảo văn bản dễ đọc trên nền tối */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Tạo bóng cho văn bản để dễ đọc hơn */
+    padding: 150px 0; /* Tăng padding để tạo không gian cho nội dung */
+}
+.cta-button {
+    background-color: #1877F2; /* Màu xanh Facebook */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #166FE5;
+}
+.social-proof img {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
